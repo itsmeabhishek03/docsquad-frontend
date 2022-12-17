@@ -29,7 +29,7 @@ const Auth = () => {
 
         const { username, password, phoneNumber, avatarURL } = form;
 
-        const URL = 'http://localhost:8000/auth';
+        const URL = 'https://doc-squad-api.onrender.com/auth';
 
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, phoneNumber, avatarURL, fullName: form.fullName
